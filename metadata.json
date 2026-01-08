@@ -1,0 +1,8 @@
+{
+  "name": "ServeRight Network",
+  "description": "A professional process server marketplace connecting attorneys and agencies with vetted servers in Metro Atlanta. Real-time tracking and automated affidavit delivery.",
+  "requestFramePermissions": [
+    "camera",
+    "geolocation"
+  ]
+}

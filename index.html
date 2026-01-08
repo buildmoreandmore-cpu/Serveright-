@@ -1,0 +1,110 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ServeRight Network | Metro Atlanta Process Serving</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=DM+Serif+Display:ital@0;1&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary-navy: #1a2b4a;
+      --secondary-slate: #4a5568;
+      --accent-teal: #0d9488;
+      --bg-primary: #fafafa;
+
+      /* Motion Durations */
+      --duration-instant: 0.1s;
+      --duration-fast: 0.15s;
+      --duration-normal: 0.25s;
+      --duration-slow: 0.4s;
+      
+      /* Easings */
+      --ease-out: cubic-bezier(0.33, 1, 0.68, 1);
+      --ease-out-bounce: cubic-bezier(0.34, 1.56, 0.64, 1);
+      --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+    }
+    body {
+      font-family: 'DM Sans', 'Plus Jakarta Sans', sans-serif;
+      background-color: var(--bg-primary);
+      color: var(--primary-navy);
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+    }
+    h1, h2, h3, .serif {
+      font-family: 'DM Serif Display', serif;
+    }
+    .mono {
+      font-family: 'JetBrains Mono', monospace;
+    }
+
+    /* Animation Keyframes */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes nodeAppear {
+      0% { transform: scale(0); opacity: 0; }
+      70% { transform: scale(1.1); opacity: 1; }
+      100% { transform: scale(1); opacity: 1; }
+    }
+    @keyframes lineDraw {
+      from { width: 0; }
+      to { width: 100%; }
+    }
+    @keyframes shimmer {
+      0% { background-position: -200% 0; }
+      100% { background-position: 200% 0; }
+    }
+    @keyframes nodePulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.1); }
+      100% { transform: scale(1); }
+    }
+
+    /* Motion Utility Classes */
+    .animate-fade-up { animation: fadeUp var(--duration-normal) var(--ease-out) forwards; }
+    .animate-node { animation: nodeAppear var(--duration-normal) var(--ease-out-bounce) forwards; }
+    .animate-line { animation: lineDraw 0.5s var(--ease-in-out) forwards; }
+    .animate-shimmer {
+      background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+      background-size: 200% 100%;
+      animation: shimmer 1.5s infinite linear;
+    }
+    
+    .stagger-1 { animation-delay: 0.1s; opacity: 0; }
+    .stagger-2 { animation-delay: 0.2s; opacity: 0; }
+    .stagger-3 { animation-delay: 0.3s; opacity: 0; }
+    .stagger-4 { animation-delay: 0.4s; opacity: 0; }
+
+    .btn-active:active { transform: scale(0.97); transition: transform 0.1s var(--ease-out); }
+    .card-hover { transition: transform 0.2s var(--ease-out), shadow 0.2s var(--ease-out); }
+    .card-hover:hover { transform: translateY(-4px); }
+
+    ::-webkit-scrollbar { width: 8px; }
+    ::-webkit-scrollbar-track { background: #f1f1f1; }
+    ::-webkit-scrollbar-thumb { background: #ccc; border-radius: 4px; }
+    ::-webkit-scrollbar-thumb:hover { background: #999; }
+
+    .portal-transition-enter { opacity: 0; transform: translateX(20px); }
+    .portal-transition-active { opacity: 1; transform: translateX(0); transition: all 0.3s var(--ease-out); }
+  </style>
+<script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@^19.2.3",
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "@google/genai": "https://esm.sh/@google/genai@^1.34.0",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/"
+  }
+}
+</script>
+</head>
+<body>
+  <div id="root"></div>
+</body>
+</html>
